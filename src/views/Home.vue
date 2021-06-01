@@ -416,10 +416,13 @@ export default class MakeYourShirt extends Vue {
     if (this.newFont) {
       return [
         ...assetsFont,
-        this.newFont.name.split(".").slice(0, -1).join(".")
-      ]
+        this.newFont.name
+          .split(".")
+          .slice(0, -1)
+          .join(".")
+      ];
     }
-    return assetsFont
+    return assetsFont;
   }
 }
 </script>
@@ -428,11 +431,11 @@ export default class MakeYourShirt extends Vue {
 .sticky-preview {
   position: sticky;
   // top: 5rem;
+}
 
-  .preview-image {
-    position: absolute;
-    user-select: none;
-  }
+.preview-image {
+  position: absolute;
+  user-select: none;
 }
 
 .v-input--radio-group__input {
